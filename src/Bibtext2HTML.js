@@ -1,5 +1,4 @@
 const bibtexParse = require("bibtex-parse");
-const fs = require("fs");
 
 // Generators
 
