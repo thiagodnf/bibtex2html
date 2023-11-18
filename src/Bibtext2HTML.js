@@ -37,11 +37,9 @@ module.exports = class Parser {
         this.generators.push(generator);
     }
 
-    parse(file) {
+    parse(content) {
 
-        const bibtex = fs.readFileSync(file, "utf8");
-
-        let entries = bibtexParse.entries(bibtex);
+        let entries = bibtexParse.entries(content);
 
         for (const entry of entries) {
             for (const generator of this.generators) {
